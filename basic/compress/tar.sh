@@ -1,0 +1,2 @@
+tar -xvzf file.tar
+

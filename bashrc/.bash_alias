@@ -1,0 +1,58 @@
+eval $(/usr/libexec/path_helper -s)
+alias ll="ls -lt"
+alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias vb=vboxmanage\ 
+alias vbgp="vb guestproperty"\ 
+alias vbst="vb startvm"\ 
+alias vbct="vb controlvm"\
+alias vblist="vb list vms"\ 
+
+#virtual box stuff
+function vbip() {
+  vboxmanage guestproperty enumerate "$1" | grep IP;
+}
+
+function vbsave() {
+  vboxmanage controlvm "$1" savestate;
+}
+
+function vbclone() {
+  vboxmanage clonevm "$1" --name "$2" --mode all --basefolder "$3" --register;
+}
+
+function vbnic() {
+  vboxmanage showvminfo "$1" | grep NIC;
+}
+
+function vbstart() {
+ vboxmanage startvm "$1" --type headless;
+ sheSays "$1 started successfully"
+
+}
+
+function vbshow() {
+  vboxmanage startvm "$1";
+}
+
+function vboff() { 
+  vboxmanage controlvm "$1" poweroff; 
+}
+
+#say functions
+#portuguese voices
+#Joana, Luciana
+function elaFala() {
+  say -v Joana "$1";
+}
+
+# english voices
+# Karen, Samantha, Tessa
+function sheSays() { say -v Karen "$1"; }
+
+
+function testBaby() {
+  sheSays "Baby, Baby"; 
+  elaFala "Fica bonitinha. Ficafica bonitinha"; 
+  sheSays "Baby, "; 
+  elaFala "Nao me irritaaaa";
+}  
