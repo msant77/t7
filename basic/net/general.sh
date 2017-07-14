@@ -8,7 +8,16 @@
  lsof
  # lsof filtered by LISTEN  
  lsof | grep LISTEN 
- # last 10 history entries
+
+
+#net status, net usage
+#install vnstat 
+sudo apt-get install vnstat
+
+#monitor 
+watch -n 5 --differences vnstat -d eth0   
+
+# last 10 history entries
  history | tail 
  # last 20 history entries  
  history | tail -n20

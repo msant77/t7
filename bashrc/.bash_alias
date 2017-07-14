@@ -1,15 +1,20 @@
 eval $(/usr/libexec/path_helper -s)
-alias ll="ls -lt"
+alias ll="ls -lta"
 alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias vb=vboxmanage\ 
 alias vbgp="vb guestproperty"\ 
-alias vbst="vb startvm"\ 
+#alias vbst="vb startvm"\ 
 alias vbct="vb controlvm"\
 alias vblist="vb list vms"\ 
+alias tset="cd /d/msant.org/tset/repo"
 
 #virtual box stuff
 function vbip() {
-  vboxmanage guestproperty enumerate "$1" | grep IP;
+  echo `VBoxManage guestproperty get "$1" "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{ print $2 }'`;
+}
+
+function vbst() { 
+  vboxmanage showvminfo "$1" | grep -c "running (since"; 
 }
 
 function vbsave() {
@@ -26,7 +31,12 @@ function vbnic() {
 
 function vbstart() {
  vboxmanage startvm "$1" --type headless;
- sheSays "$1 started successfully"
+ #sheSays "$1 started successfully"
+}
+
+function vbssh() { 
+	
+	ssh e4e5@`VBoxManage guestproperty get "$1" "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{ print $2 }'`;
 
 }
 
