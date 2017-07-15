@@ -1,9 +1,9 @@
-function a2sm() { 
-  screen -dmS "$1" aria2c -seed-time=0 `cat "$1".mag`; 
+function a2sm() {
+  screen -dmS "$1" aria2c --seed-time=0 `cat "$1".mag` >> logs/"$1".log; 
 }
 
 function a2s() {  
-  screen -dmS "$1" aria2c -seed-time=0 "$2"; 
+  screen -dmS "$1" aria2c --seed-time=0 "$2"; 
 }
 
 function la2sm { 
