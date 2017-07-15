@@ -55,8 +55,27 @@ function vbrestart() {
   vbssh "$1"; 
 }
 
+#screen functions
+
+function scls() { 
+  screen -ls; 
+}
+
+function scr() { 
+  screen -r "$1"; 
+}
+
+function scS() { 
+  screen -S "$1"; 
+}
+
+function scSdm() {
+  screen -Sdm $1 $2; 
+}
+
 
 #say functions
+
 #portuguese voices
 #Joana, Luciana
 function elaFala() {
