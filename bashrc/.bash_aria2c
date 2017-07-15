@@ -6,3 +6,6 @@ function a2s() {
   screen -dmS "$1" aria2c "$2"; 
 }
 
+function la2sm { 
+  for i in "$@"; do a2sm $i; done;
+}
