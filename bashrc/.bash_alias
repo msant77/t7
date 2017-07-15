@@ -48,6 +48,14 @@ function vboff() {
   vboxmanage controlvm "$1" poweroff; 
 }
 
+function vbrestart() { 
+  vboff "$1"; 
+  vbstart "$1"; 
+  sleep 50; 
+  vbssh "$1"; 
+}
+
+
 #say functions
 #portuguese voices
 #Joana, Luciana
