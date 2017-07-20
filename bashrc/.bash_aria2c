@@ -1,3 +1,11 @@
+function a2s2() {
+   screen -dmS "$1" aria2c --seed-ratio=1.0 --seed-time="$3" --bt-seed-unverified=true "$2";
+}  
+
+function a2s2m() {
+   screen -dmS "$1" aria2c --seed-ratio=1.0 --seed-time="$2" --bt-seed-unverified=true `cat "$1".mag`;
+}
+
 function a2sm() {
   screen -dmS "$1" aria2c --seed-time=0 `cat "$1".mag` >> logs/"$1".log; 
 }
@@ -6,6 +14,12 @@ function a2s() {
   screen -dmS "$1" aria2c --seed-time=0 "$2"; 
 }
 
-function la2sm { 
-  for i in "$@"; do a2sm $i; done;
+function la2s2m { 
+  for i in "$@"; do a2s2m $i 90 ; done;
 }
+
+
+function la2s2m {
+  for i in "$@"; do a2s2 $i; done;
+}
+
