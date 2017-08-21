@@ -7,7 +7,7 @@ function a2s2m() {
 }
 
 function a2sm() {
-  screen -dmS "$1" aria2c --seed-time=0 `cat "$2""$1".mag` >> logs/"$1".log; 
+  screen -dmS "$1" aria2c --seed-time=0 `cat "$2""$1".mag`; 
 }
 
 function a2s() {  
@@ -18,8 +18,10 @@ function la2s2m {
   for i in "$@"; do a2s2m $i 90 ; done;
 }
 
-
 function la2sm {
   for i in "$@"; do a2sm $i; done;
 }
 
+function lsa2sm() {
+  la2sm `ls -1 $1 | sed -e 's/\..*$//'`;
+}
