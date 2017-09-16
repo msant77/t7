@@ -31,3 +31,9 @@ gcloud init
 
 #log in the google cloud platform
 
+
+#access virtual linux
+# https://cloud.google.com/compute/docs/instances/connecting-to-instance
+
+
+gcloud compute ssh [INSTANCE_NAME]
