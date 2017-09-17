@@ -24,12 +24,32 @@ tar -xvzf gcsdk.tar.gz
 #inside the folder used as a target to the extracted files
 ./install.sh
 
+
+# after that, it is needed that one adds the tools path to $PATH
+# this line updates PATH 
+source [path_to_google-cloud-sdk]/path.bash.inc 
+
+# this one adds auto-completion 
+source [path_to_google-cloud-sdk]/completion.bash.inc
+
+
+#Install components for working with 
+
+
 ## Initialize the SDK
 
 gcloud init 
 
 
-#log in the google cloud platform
+# OUTSIDE TASK: log in the google cloud platform
+
+
+
+
+
+
+
+
 
 
 #access virtual linux
@@ -37,3 +57,8 @@ gcloud init
 
 
 gcloud compute ssh [INSTANCE_NAME]
+
+
+
+
+
