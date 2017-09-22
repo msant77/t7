@@ -1,4 +1,4 @@
-#Procedimentos básicos de uso do SDK do Google Cloud no Windows 
+# Procedimentos básicos de uso do SDK do Google Cloud no Windows 
 
 Os procedimentos aqui descritos foram executados em uma Oracle Virtual Box rodando em um Mac Book Pro com Mac OS Sierra.
 
