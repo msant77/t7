@@ -1,3 +1,21 @@
+# Google Cloud SDK 
+Command Line Interface Documentation
+
+
+# Index
+
+- [Getting Started](./getting-started.md)
+- [gcloud compute - managing instances](./gcloud-compute.md)
+  - [gcloud compute instances](./gcloud-compute-instances.md)
+  - [gcloud compute firewall-rules](./gcloud-compute-firewall-rules.md)
+
+
+# Throughout this repository some tools can be found to simplify the use of the gcloud command
+
+Refer to the section `#gcloud stuff` on this [file](../../bashrc/.bash_alias)
+
+
+
 ``` 
 gcloud compute --project "project-name" instances create "vm-name" --zone "southamerica-east1-a" 
   --machine-type "n1-standard-8" --subnet "default" --maintenance-policy "MIGRATE" 
