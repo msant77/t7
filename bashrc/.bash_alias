@@ -9,6 +9,16 @@ alias vblist="vb list vms"\
 alias tset="cd /Users/msant/d/tset/repo"
 
 
+#stuff 
+function speedtesta() {
+  curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - ;
+} 
+
+function speedtest() {
+  speedtesta | grep -e Testing -e Hosted -e Download -e Upload;
+}
+
+
 #sec stuff
 function myports() { 
    nmap -p 1-65535  127.0.0.1; 
@@ -68,6 +78,9 @@ function gcaddtag() {
 function gcrmvtag() {
   gcci remove-tags "$1" --tags "$2"
 }
+
+
+
 
  
 #virtual box stuff

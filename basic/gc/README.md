@@ -47,6 +47,25 @@ tmpfs           297M     0  297M   0% /sys/fs/cgroup
 after `apt update` 
 `/dev/sda1       9.8G  967M  8.3G  11% /`
 
+
+Internet speed is quite alright
+
+`curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -` will produce: 
+
+``` 
+Retrieving speedtest.net configuration...
+Testing from Google Cloud Platform (35.198.60.102)...
+Retrieving speedtest.net server list...
+Selecting best server based on ping...
+Hosted by KamaTera INC (Santa Clara, CA) [10.61 km]: 207.651 ms
+Testing download speed................................................................................
+Download: '302.72 Mbit/s'
+Testing upload speed................................................................................................
+Upload: '103.64 Mbit/s' 
+``` 
+
+
+
 ## sftp setup 
 ## [sftp setup](https://cloud.google.com/compute/docs/instances/transfer-files)
 
