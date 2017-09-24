@@ -6,7 +6,7 @@ alias vbgp="vb guestproperty"\
 #alias vbst="vb startvm"\ 
 alias vbct="vb controlvm"\
 alias vblist="vb list vms"\ 
-alias tset="cd /Users/msant/d/tset/repo"
+alias tset="cd $HOME/d/tset/"
 
 
 #stuff 
@@ -24,6 +24,12 @@ function myports() {
    nmap -p 1-65535  127.0.0.1; 
 }
 
+function sshkeygen() {
+  ssh-keygen -t rsa -f $HOME/.ssh/"$1" -C "$2";
+  chmod 400 $HOME/.ssh/"$1"; 
+}
+
+
 
 #gccloud stuff
 alias gc="gcloud"
@@ -32,7 +38,7 @@ alias gcci="gcc instances"
 alias gcb="gc beta"
 alias gcbc="gcb compute"
 
-export gcpath="/Users/msant/d/tset/bin/google-cloud-sdk/"
+export gcpath="$HOME/d/tet/bin/google-cloud-sdk/"
  
 function gcact() {
   source ${gcpath}path.bash.inc;
