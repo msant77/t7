@@ -47,3 +47,12 @@ tmpfs           297M     0  297M   0% /sys/fs/cgroup
 after `apt update` 
 `/dev/sda1       9.8G  967M  8.3G  11% /`
 
+## sftp setup 
+## [sftp setup](https://cloud.google.com/compute/docs/instances/transfer-files)
+
+
+
+## service accounts 
+[service accounts](https://cloud.google.com/iam/docs/service-accounts)
+
+[create and manage service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts)

@@ -82,8 +82,8 @@ vm-name  southamerica-east1-a  n1-standard-8               10.0.0.1     192.168.
 
 
 # Disk creation 
-gcloud compute --project=clirea-prod disks create dsk-db-prod-backup --zone=southamerica-east1-a --type=pd-ssd --size=1000GB
-gcloud compute --project=clirea-prod disks create dsk-db-prod-redo01 --zone=southamerica-east1-a --type=pd-ssd --size=10GB
+gcloud compute --project=projName disks create dsk-db-prod-backup --zone=southamerica-east1-a --type=pd-ssd --size=1000GB
+gcloud compute --project=projName disks create dsk-db-prod-redo01 --zone=southamerica-east1-a --type=pd-ssd --size=10GB
 
 # Disk Attachment 
 # https://cloud.google.com/sdk/gcloud/reference/compute/instances/attach-disk
@@ -100,20 +100,23 @@ gcloud compute disks list
 #cretes the minimun linux configuration 
 # $8.58
 
-gcloud beta compute --project "clirea-prod" instances create "vmmin" --zone "southamerica-east1-a" --machine-type "f1-micro" --subnet "default" --maintenance-policy "MIGRATE" --service-account "461101376066-compute@developer.gserviceaccount.com" --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring.write","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --min-cpu-platform "Automatic" --tags "http-server" --image "debian-9-stretch-v20170918" --image-project "debian-cloud" --boot-disk-size "10" --boot-disk-type "pd-ssd" --boot-disk-device-name "vmmin"
+gcloud beta compute --project "projName" instances create "vmmin" --zone "southamerica-east1-a" --machine-type "f1-micro" --subnet "default" --maintenance-policy "MIGRATE" --service-account "461101376066-compute@developer.gserviceaccount.com" --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring.write","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --min-cpu-platform "Automatic" --tags "http-server" --image "debian-9-stretch-v20170918" --image-project "debian-cloud" --boot-disk-size "10" --boot-disk-type "pd-ssd" --boot-disk-device-name "vmmin"
 
 # opens port 80
-gcloud compute --project=clirea-prod firewall-rules create default-allow-http --network=default --allow=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
+gcloud compute --project=projName firewall-rules create default-allow-http --network=default --allow=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
+
+
+#try to open 21 
+gcloud beta compute --project=projname firewall-rules create open-ftp-21-vmmin --direction=INGRESS --priority=1000 --network=default --allow=21 --source-ranges=0.0.0.0/0 --source-tags=vmmin --target-tags=vmmin
 
 
 
-
-POST https://www.googleapis.com/compute/v1/projects/clirea-prod/zones/southamerica-east1-a/instances
+POST https://www.googleapis.com/compute/v1/projects/projName/zones/southamerica-east1-a/instances
 {
   "name": "vmmin",
-  "zone": "projects/clirea-prod/zones/southamerica-east1-a",
+  "zone": "projects/projName/zones/southamerica-east1-a",
   "minCpuPlatform": "Automatic",
-  "machineType": "projects/clirea-prod/zones/southamerica-east1-a/machineTypes/f1-micro",
+  "machineType": "projects/projName/zones/southamerica-east1-a/machineTypes/f1-micro",
   "metadata": {
     "items": []
   },
@@ -131,7 +134,7 @@ POST https://www.googleapis.com/compute/v1/projects/clirea-prod/zones/southameri
       "deviceName": "vmmin",
       "initializeParams": {
         "sourceImage": "projects/debian-cloud/global/images/debian-9-stretch-v20170918",
-        "diskType": "projects/clirea-prod/zones/southamerica-east1-a/diskTypes/pd-ssd",
+        "diskType": "projects/projName/zones/southamerica-east1-a/diskTypes/pd-ssd",
         "diskSizeGb": "10"
       }
     }
@@ -139,8 +142,8 @@ POST https://www.googleapis.com/compute/v1/projects/clirea-prod/zones/southameri
   "canIpForward": false,
   "networkInterfaces": [
     {
-      "network": "projects/clirea-prod/global/networks/default",
-      "subnetwork": "projects/clirea-prod/regions/southamerica-east1/subnetworks/default",
+      "network": "projects/projName/global/networks/default",
+      "subnetwork": "projects/projName/regions/southamerica-east1/subnetworks/default",
       "accessConfigs": [
         {
           "name": "External NAT",
@@ -172,7 +175,7 @@ POST https://www.googleapis.com/compute/v1/projects/clirea-prod/zones/southameri
   ]
 }
 
-POST https://www.googleapis.com/compute/v1/projects/clirea-prod/global/firewalls
+POST https://www.googleapis.com/compute/v1/projects/projName/global/firewalls
 {
   "name": "default-allow-http",
   "kind": "compute#firewall",
@@ -190,5 +193,5 @@ POST https://www.googleapis.com/compute/v1/projects/clirea-prod/global/firewalls
       ]
     }
   ],
-  "network": "projects/clirea-prod/global/networks/default"
+  "network": "projects/projName/global/networks/default"
 }

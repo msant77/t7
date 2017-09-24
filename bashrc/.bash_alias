@@ -6,8 +6,70 @@ alias vbgp="vb guestproperty"\
 #alias vbst="vb startvm"\ 
 alias vbct="vb controlvm"\
 alias vblist="vb list vms"\ 
-alias tset="cd /d/msant.org/tset/repo"
+alias tset="cd /Users/msant/d/tset/repo"
 
+
+#sec stuff
+function myports() { 
+   nmap -p 1-65535  127.0.0.1; 
+}
+
+
+#gccloud stuff
+alias gc="gcloud"
+alias gcc="gc compute"
+alias gcci="gcc instances"
+alias gcb="gc beta"
+alias gcbc="gcb compute"
+
+export gcpath="/Users/msant/d/tset/bin/google-cloud-sdk/"
+ 
+function gcact() {
+  source ${gcpath}path.bash.inc;
+  source ${gcpath}completion.bash.inc;
+} 
+
+function gcinit() {
+  gcloud init;
+}
+
+function gclist() {
+  gcci list; 
+}
+
+function gcstart() {
+  gcci start "$1"; 
+}
+
+function gcstop() {
+ gcci stop "$1"; 
+}
+
+function gcrestart() {
+  gcstop "$1" && gcstart "$1"
+}
+
+function gcinfo() {
+  gcci describe "$1"; 
+}
+ 
+function gcidea() { 
+  gcinfo "$1" | grep -e name: -e IP -e cpu -e creation;
+} 
+
+function gcssh() {
+  gcc ssh "$1";
+}
+
+function gcaddtag() {
+  gcci add-tags "$1" --tags "$2" 
+}
+
+function gcrmvtag() {
+  gcci remove-tags "$1" --tags "$2"
+}
+
+ 
 #virtual box stuff
 function vbip() {
   echo `VBoxManage guestproperty get "$1" "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{ print $2 }'`;
