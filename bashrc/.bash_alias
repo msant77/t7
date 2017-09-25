@@ -38,7 +38,7 @@ alias gcci="gcc instances"
 alias gcb="gc beta"
 alias gcbc="gcb compute"
 
-export gcpath="$HOME/d/tet/bin/google-cloud-sdk/"
+export gcpath="$HOME/d/tset/bin/google-cloud-sdk/"
  
 function gcact() {
   source ${gcpath}path.bash.inc;
