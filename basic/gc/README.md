@@ -19,7 +19,7 @@ Refer to the section `#gcloud stuff` on this [file](../../bashrc/.bash_alias)
 ``` 
 gcloud compute --project "project-name" instances create "vm-name" --zone "southamerica-east1-a" 
   --machine-type "n1-standard-8" --subnet "default" --maintenance-policy "MIGRATE" 
-  --service-account "461101376066-compute@developer.gserviceaccount.com" 
+  --service-account "dasasdd-compute@developer.gserviceaccount.com" 
   --scopes  "https://www.googleapis.com/auth/devstorage.read_only",
             "https://www.googleapis.com/auth/logging.write",
             "https://www.googleapis.com/auth/monitoring.write",
