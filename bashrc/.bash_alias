@@ -15,7 +15,7 @@ function speedtesta() {
 } 
 
 function speedtest() {
-  speedtesta | grep -e Testing -e Hosted -e Download -e Upload;
+  speedtesta | grep -e 'Testing from' -e Hosted -e Download -e Upload;
 }
 
 
