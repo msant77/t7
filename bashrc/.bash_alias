@@ -18,6 +18,10 @@ function speedtest() {
   speedtesta | grep -e 'Testing from' -e Hosted -e Download -e Upload;
 }
 
+function encurlit() { 
+  echo -ne "$1" | hexdump -v -e '/1 "%02x"' | sed 's/\(..\)/%\1/g'; 
+} 
+
 
 #sec stuff
 function myports() { 
