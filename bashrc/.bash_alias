@@ -26,7 +26,9 @@ function myip() {
  ifconfig | grep inet\ ;
 }
 
-
+function histail() {
+  history | tail -n "$1"
+}
 
 #sec stuff
 function myports() { 
@@ -94,11 +96,50 @@ function gcrmvtag() {
   gcci remove-tags "$1" --tags "$2"
 }
 
-
-
-
  
 #virtual box stuff
+
+function vbostype() { 
+  vb list ostypes; 
+}
+
+function vbcreatel64() { 
+
+  vmhome=`pwd`/"$1" 
+  vdipath=$vmhome/"$1".vdi
+
+  mkdir $vmhome && cd $_
+  
+  let RamSize=1024\*"$2"
+  let DiskSize=1024\*"$3"
+ 
+  echo ""
+  echo "===> creating vm... named:""$1"" "$RamSize" RAM"" "$DiskSize" Disk Size"
+ 
+  vboxmanage createhd --filename $vdipath  --size=$DiskSize
+  vboxmanage createvm --name "$1" --register --basefolder $vmhome --ostype='Linux_64'
+
+  echo ""
+  echo "===> creating hdd1..."
+
+  vboxmanage storagectl "$1" --name "SATA Controller" --add sata --controller IntelAHCI
+  vboxmanage storageattach "$1" --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium $vdipath
+
+  echo ""
+  echo "===> creating dvd1..."
+
+  vboxmanage storagectl "$1" --name "IDE Controller" --add ide   
+  vboxmanage storageattach "$1" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium "$4"
+
+
+  echo "===> setting boot order..."
+  vboxmanage modifyvm "$1" --boot1 dvd --boot2 disk --boot3 none --boot4 none
+  echo "===> setting memories..."
+  vboxmanage modifyvm "$1" --memory $RamSize --vram 128
+  #echo "===> setting nic..."
+  #vboxmanage modifyvm "$1" --nic1 bridged --bridgeadpater1 en1
+}
+
 function vbip() {
   echo `VBoxManage guestproperty get "$1" "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{ print $2 }'`;
 }
