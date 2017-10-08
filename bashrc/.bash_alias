@@ -81,7 +81,7 @@ function gcinfo() {
 }
  
 function gcidea() { 
-  gcinfo "$1" | grep -e name: -e IP -e cpu -e creation;
+  gcinfo "$1" | grep -e name: -e IP -e cpu -e creation -e status;
 } 
 
 function gcssh() {
