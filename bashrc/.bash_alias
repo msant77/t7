@@ -22,6 +22,11 @@ function encurlit() {
   echo -ne "$1" | hexdump -v -e '/1 "%02x"' | sed 's/\(..\)/%\1/g'; 
 } 
 
+function myip() { 
+ ifconfig | grep inet\ ;
+}
+
+
 
 #sec stuff
 function myports() { 
