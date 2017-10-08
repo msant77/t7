@@ -94,3 +94,44 @@ yum install mpfr.x86_64 -y
 - [ ] sshkeygen
 - [ ] upload public key 
 - [ ] test connection
+
+
+
+
+
+## stop oracle 
+
+With the user oracle
+
+
+`sqlplus / as sysdba` 
+
+Then inside **SQL>** execue the following and wait
+
+``` 
+shutdown immediate
+```
+
+Response should be 
+
+```
+SQL> shutdown immediate
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+```  
+
+Subir listener
+
+`lsnrctl start`
+
+In order to start the database execute the following
+```
+sqlplus / as sysdba
+``` 
+
+Then under **SQL>** 
+
+```
+Startup;
+```
