@@ -1,3 +1,6 @@
+#change logged user to some other user
+su - username
+
 #shows all groups
 getent group
 
