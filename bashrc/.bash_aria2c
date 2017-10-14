@@ -22,6 +22,11 @@ function la2sm {
   for i in "$@"; do a2sm $i; done;
 }
 
+function la2s {
+  for i in "$@"; do a2sm $i; done;
+}
+
+
 function lsa2sm() {
   la2sm `ls -1 $1 | sed -e 's/\..*$//'`;
 }
