@@ -1,3 +1,4 @@
+#https://help.github.com/articles/changing-author-info/
 repo_name="$1"
 repo_path="$2"
 
