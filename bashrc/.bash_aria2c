@@ -23,7 +23,7 @@ function la2sm {
 }
 
 function la2s {
-  for i in "$@"; do a2sm $i; done;
+  for i in "$@"; do a2s $i $i; done;
 }
 
 
