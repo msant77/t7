@@ -136,6 +136,10 @@ function gcrmvtag() {
   gcci remove-tags "$1" --tags "$2"
 }
 
+function gcbmake() {
+ echo 'gsutil mb -c regional -l southamerica-east1 gs://"$1"';
+ gsutil mb -c regional -l southamerica-east1 gs://"$1"; 
+}
  
 #virtual box stuff
 
