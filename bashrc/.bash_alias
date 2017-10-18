@@ -137,7 +137,7 @@ function gcrmvtag() {
 }
 
 function gcbmake() {
- echo 'gsutil mb -c regional -l southamerica-east1 gs://"$1"';
+ echo "gsutil mb -c regional -l southamerica-east1 gs://`echo "$1"`";
  gsutil mb -c regional -l southamerica-east1 gs://"$1"; 
 }
  
