@@ -1,4 +1,4 @@
-#google cloud storage 
+google cloud storage 
 https://cloud.google.com/storage/docs/quickstart-gsutil
 
 
@@ -68,5 +68,31 @@ gsutil acl ch -r -u AllUsers:R gs://thy-bucket.com
 ```
  gsutil web set -m index.html -e 404.html gs://thy-bucket.com
 ```
+
+## Extras 
+
+[x] To avoid having to restablish the acl reading public rights at every single update on the pages and files of a stored static website. From [this](https://stackoverflow.com/questions/14371376/how-do-you-make-many-files-public-in-google-cloud-storage/46590489#46590489) stackoverflow thread. 
+```
+gsutil defacl set public-read gs://thy-bucket
+```
+
+
+The following are from [this](https://cloud.google.com/storage/docs/gsutil/addlhelp/WorkingWithObjectMetadata)  google cloud sdk documentation page.
+
+[x] To flush the cache after publication. Very useful when there is small or subtle changes in the files
+
+[x] Tries to fix the cache problem for global buckets
+```
+gsutil -h "Content-Type:text/html" \
+       -h "Cache-Control:public, max-age=1" cp -r images \
+       gs://thy-bucket
+```
+ 
+[x] To set the content-disposition of your files. Good for 
+```
+gsutil -h 'Content-Disposition:attachment; filename=filename.ext' \
+      cp -r attachments gs://thy-bucket/attachments
+```
+
 
 There you have it. Fast, high available and secure web server. 
