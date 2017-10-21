@@ -1,4 +1,6 @@
-eval $(/usr/libexec/path_helper -s)
+echo "tset's on!"
+echo ""
+
 alias ll="ls -lta"
 alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias vb=vboxmanage\ 
@@ -68,12 +70,19 @@ function parse_yaml2() {
 }
 
 #gccloud stuff
+
 alias gc="gcloud"
 alias gcc="gc compute"
 alias gcci="gcc instances"
 alias gccd="gcc disks"
-alias gcb="gc beta"
-alias gcbc="gcb compute"
+alias gc-b="gc beta"
+alias gc-a="gc alpha"
+alias gc-abill="gc alpha billing"
+alias gc-bbill="gc beta billing"
+
+alias gc-aci="gc-a compute instances"
+alias gc-bci="gc-b compute instances"
+
 
 export gcpath="$HOME/d/tset/bin/google-cloud-sdk/"
  
