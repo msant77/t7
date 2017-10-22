@@ -8,7 +8,27 @@ alias vbgp="vb guestproperty"\
 #alias vbst="vb startvm"\ 
 alias vbct="vb controlvm"\
 alias vblist="vb list vms"\ 
-alias tset="cd $HOME/d/tset/"
+export tsetpath=$HOME/d/tset/
+
+#tset 
+function tset() {
+  cd $tsetpath
+  echo ""
+  echo "[; hello, what r we up to ?"
+  echo "" 
+}
+
+function tsetcode() {
+  pushd $tsetpath 
+  code . 
+  popd 
+}
+
+function tsetsubl() {
+  pushd $tsetpath
+  subl .
+  popd
+}
 
 
 #stuff 
