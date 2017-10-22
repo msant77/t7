@@ -64,8 +64,6 @@ function sshkeygen() {
 
 
 ## derived from https://gist.github.com/epiloque/8cf512c6d64641bde388
-
-
 ## works for arrays of hashes, as long as the hashes do not have arrays
 function parse_yaml2() {
     local prefix=$2
@@ -88,6 +86,7 @@ function parse_yaml2() {
       }
     }' | sed 's/_=/+=/g'
 }
+
 
 #gccloud stuff
 
@@ -165,9 +164,45 @@ function gcrmvtag() {
   gcci remove-tags "$1" --tags "$2"
 }
 
+
+function gccicreate() {
+  if [ $1 == help ]; then 
+    echo "Usage of this command demands the following parameters, otherwise will not work."
+    echo " "
+    echo " [min 'projectname vmname diskname disksize serviceAccount scopes' | help ] "
+  elif [ $1 == min ];
+  then
+    scope1="default,sql-admin,storage-full"
+
+    echo ""
+    echo "Confirm creation of new Google Cloud Compute Instance with the following setup: "
+    echo "  Machine-Type        : f1-micro "
+    echo "  Project             : $2"
+    echo "  Instance Name       : $3"
+    echo "  Service Account     : $6"
+    echo "  Main Disk Name      : $4"
+    echo "  Main Disk Size      : $5"
+    echo "  Scopes              : $scope1"
+    echo ""
+    echo "Please, confirm (1/2):"
+
+    select yn in "Yes" "No"; do
+        case $yn in
+          Yes ) gcloud compute --project "$2" instances create "$3" --zone "southamerica-east1-a" --machine-type "f1-micro" --subnet "default" --maintenance-policy "MIGRATE" --service-account "$6" --scopes $scope1 --tags "http-server" --image "debian-9-stretch-v20170918" --image-project "debian-cloud" --boot-disk-size "$5" --boot-disk-type "pd-ssd" --boot-disk-device-name "$4"; break;;
+          No ) echo "the vm creation has been aborted"; break;;
+        esac
+    done
+
+    #--min-cpu-platform "Automatic" 
+
+  fi
+}
+
+
+
 function gcbmake() {
- echo "gsutil mb -c regional -l southamerica-east1 gs://`echo "$1"`";
- gsutil mb -c regional -l southamerica-east1 gs://"$1"; 
+  echo "gsutil mb -c regional -l southamerica-east1 gs://`echo "$1"`";
+  gsutil mb -c regional -l southamerica-east1 gs://"$1"; 
 }
  
 #virtual box stuff
