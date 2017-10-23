@@ -198,6 +198,16 @@ function gccicreate() {
   fi
 }
 
+function gccipcreate() {
+  echo ""
+  echo " this will reserve a new ip at Google Cloud Compute"
+  echo " ... money is flowing out after this. Use wisely!"
+  echo ""
+
+  gcloud compute addresses create $1 --region southamerica-east1 
+}
+
+
 
 
 function gcbmake() {
