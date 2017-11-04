@@ -5,6 +5,10 @@ alias gg="gcloud"
 alias ggc="gg compute"
 alias ggci="ggc instances"
 alias ggcd="ggc disks"
+alias ggp="gg projects"
+alias ggcfg="gg config"
+alias ggcfgset="gg config set"
+alias ggthis="gg config list"
 alias gg-b="gg beta"
 alias gg-a="gg alpha"
 alias gg-abill="gg alpha billing"
@@ -23,6 +27,14 @@ function ggact() {
 
 function gginit() {
   gcloud init;
+}
+
+function ggplist() {
+  ggp list;
+}
+
+function ggpchange() { 
+  ggcfgset project "$1"; 
 }
 
 function gglist() {
@@ -122,7 +134,11 @@ function ggcipcreate() {
 
 
 
+
+
 function ggbmake() {
   echo "gsutil mb -c regional -l southamerica-east1 gs://`echo "$1"`";
   gsutil mb -c regional -l southamerica-east1 gs://"$1"; 
 }
+
+
