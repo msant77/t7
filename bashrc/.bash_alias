@@ -3,12 +3,14 @@ echo ""
 
 alias ll="ls -lta"
 alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias py=python\ 
 alias vb=vboxmanage\ 
 alias vbgp="vb guestproperty"\ 
 #alias vbst="vb startvm"\ 
 alias vbct="vb controlvm"\
 alias vblist="vb list vms"\ 
 export tsetpath=$HOME/d/tset/
+
 
 #tset 
 function tset() {
@@ -30,6 +32,15 @@ function tsetsubl() {
   popd
 }
 
+#virtualization and cloud stuff
+function tsetact () {
+  if [ $1 == gg ]; 
+  then 
+    ggsubpath=bashrc/.bash_alias_gcloud;
+    source $tsetpath$ggsubpath;
+    ggact;
+  fi
+}
 
 #stuff 
 function speedtesta() {
@@ -87,133 +98,6 @@ function parse_yaml2() {
     }' | sed 's/_=/+=/g'
 }
 
-
-#gccloud stuff
-
-alias gc="gcloud"
-alias gcc="gc compute"
-alias gcci="gcc instances"
-alias gccd="gcc disks"
-alias gc-b="gc beta"
-alias gc-a="gc alpha"
-alias gc-abill="gc alpha billing"
-alias gc-bbill="gc beta billing"
-
-alias gc-aci="gc-a compute instances"
-alias gc-bci="gc-b compute instances"
-
-
-export gcpath="$HOME/d/tset/bin/google-cloud-sdk/"
- 
-function gcact() {
-  source ${gcpath}path.bash.inc;
-  source ${gcpath}completion.bash.inc;
-} 
-
-function gcinit() {
-  gcloud init;
-}
-
-function gclist() {
-  gcci list; 
-}
-
-function gcdlist() {
-  gccd list;
-}
-
-function gcdinfo() {
-  gccd describe "$1"; 
-}
-
-function gcdidea() {
-  gcdinfo | grep -e sizeGb -e id -e kind -e users:\
- - ;
-
-}
-
-function gcstart() {
-  gcci start "$1"; 
-}
-
-function gcstop() {
- gcci stop "$1"; 
-}
-
-function gcrestart() {
-  gcstop "$1" && gcstart "$1"
-}
-
-function gcinfo() {
-  gcci describe "$1"; 
-}
- 
-function gcidea() { 
-  gcinfo "$1" | grep -e name: -e IP -e cpu -e creation -e status;
-} 
-
-function gcssh() {
-  gcc ssh "$1";
-}
-
-function gcaddtag() {
-  gcci add-tags "$1" --tags "$2" 
-}
-
-function gcrmvtag() {
-  gcci remove-tags "$1" --tags "$2"
-}
-
-
-function gccicreate() {
-  if [ $1 == help ]; then 
-    echo "Usage of this command demands the following parameters, otherwise will not work."
-    echo " "
-    echo " [min 'projectname vmname diskname disksize serviceAccount scopes' | help ] "
-  elif [ $1 == min ];
-  then
-    scope1="default,sql-admin,storage-full"
-
-    echo ""
-    echo "Confirm creation of new Google Cloud Compute Instance with the following setup: "
-    echo "  Machine-Type        : f1-micro "
-    echo "  Project             : $2"
-    echo "  Instance Name       : $3"
-    echo "  Service Account     : $6"
-    echo "  Main Disk Name      : $4"
-    echo "  Main Disk Size      : $5"
-    echo "  Scopes              : $scope1"
-    echo ""
-    echo "Please, confirm (1/2):"
-
-    select yn in "Yes" "No"; do
-        case $yn in
-          Yes ) gcloud compute --project "$2" instances create "$3" --zone "southamerica-east1-a" --machine-type "f1-micro" --subnet "default" --maintenance-policy "MIGRATE" --service-account "$6" --scopes $scope1 --tags "http-server" --image "debian-9-stretch-v20170918" --image-project "debian-cloud" --boot-disk-size "$5" --boot-disk-type "pd-ssd" --boot-disk-device-name "$4"; break;;
-          No ) echo "the vm creation has been aborted"; break;;
-        esac
-    done
-
-    #--min-cpu-platform "Automatic" 
-
-  fi
-}
-
-function gccipcreate() {
-  echo ""
-  echo " this will reserve a new ip at Google Cloud Compute"
-  echo " ... money is flowing out after this. Use wisely!"
-  echo ""
-
-  gcloud compute addresses create $1 --region southamerica-east1 
-}
-
-
-
-
-function gcbmake() {
-  echo "gsutil mb -c regional -l southamerica-east1 gs://`echo "$1"`";
-  gsutil mb -c regional -l southamerica-east1 gs://"$1"; 
-}
  
 #virtual box stuff
 
