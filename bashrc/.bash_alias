@@ -4,11 +4,6 @@ echo ""
 alias ll="ls -lta"
 alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias py=python\ 
-alias vb=vboxmanage\ 
-alias vbgp="vb guestproperty"\ 
-#alias vbst="vb startvm"\ 
-alias vbct="vb controlvm"\
-alias vblist="vb list vms"\ 
 export tsetpath=$HOME/d/tset/
 
 

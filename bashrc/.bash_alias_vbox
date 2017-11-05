@@ -1,5 +1,9 @@
- 
-#virtual box stuff
+ #virtual box stuff
+
+alias vb=vboxmanage\ 
+alias vbgp="vb guestproperty"\ 
+alias vbct="vb controlvm"\
+alias vblist="vb list vms"\ 
 
 function vbostype() { 
   vb list ostypes; 
