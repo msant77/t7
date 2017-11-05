@@ -39,6 +39,10 @@ function tsetact () {
     ggsubpath=bashrc/.bash_alias_gcloud;
     source $tsetpath$ggsubpath;
     ggact;
+  elif [ $1 == vb ] ;
+  then
+    vbsubpath=bashrc/.bash_alias_vbox;
+    source $tsetpath$vbsubpath; 
   fi
 }
 
@@ -96,96 +100,6 @@ function parse_yaml2() {
               printf("%s%s%s%s=(\"%s\")\n", "'"$prefix"'",vn, $2, conj[indent-1],$3);
       }
     }' | sed 's/_=/+=/g'
-}
-
- 
-#virtual box stuff
-
-function vbostype() { 
-  vb list ostypes; 
-}
-
-function vbcreatel64() { 
-
-  vmhome=`pwd`/"$1" 
-  vdipath=$vmhome/"$1".vdi
-
-  mkdir $vmhome && cd $_
-  
-  let RamSize=1024\*"$2"
-  let DiskSize=1024\*"$3"
- 
-  echo ""
-  echo "===> creating vm... named:""$1"" "$RamSize" RAM"" "$DiskSize" Disk Size"
- 
-  vboxmanage createhd --filename $vdipath  --size=$DiskSize
-  vboxmanage createvm --name "$1" --register --basefolder $vmhome --ostype='Linux_64'
-
-  echo ""
-  echo "===> creating hdd1..."
-
-  vboxmanage storagectl "$1" --name "SATA Controller" --add sata --controller IntelAHCI
-  vboxmanage storageattach "$1" --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium $vdipath
-
-  echo ""
-  echo "===> creating dvd1..."
-
-  vboxmanage storagectl "$1" --name "IDE Controller" --add ide   
-  vboxmanage storageattach "$1" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium "$4"
-
-
-  echo "===> setting boot order..."
-  vboxmanage modifyvm "$1" --boot1 dvd --boot2 disk --boot3 none --boot4 none
-  echo "===> setting memories..."
-  vboxmanage modifyvm "$1" --memory $RamSize --vram 128
-  #echo "===> setting nic..."
-  #vboxmanage modifyvm "$1" --nic1 bridged --bridgeadpater1 en1
-}
-
-function vbip() {
-  echo `VBoxManage guestproperty get "$1" "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{ print $2 }'`;
-}
-
-function vbst() { 
-  vboxmanage showvminfo "$1" | grep -c "running (since"; 
-}
-
-function vbsave() {
-  vboxmanage controlvm "$1" savestate;
-}
-
-function vbclone() {
-  vboxmanage clonevm "$1" --name "$2" --mode all --basefolder "$3" --register;
-}
-
-function vbnic() {
-  vboxmanage showvminfo "$1" | grep NIC;
-}
-
-function vbstart() {
- vboxmanage startvm "$1" --type headless;
- #sheSays "$1 started successfully"
-}
-
-function vbssh() { 
-	
-	ssh e4e5@`VBoxManage guestproperty get "$1" "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{ print $2 }'`;
-
-}
-
-function vbshow() {
-  vboxmanage startvm "$1";
-}
-
-function vboff() { 
-  vboxmanage controlvm "$1" poweroff; 
-}
-
-function vbrestart() { 
-  vboff "$1"; 
-  vbstart "$1"; 
-  sleep 50; 
-  vbssh "$1"; 
 }
 
 #screen functions
