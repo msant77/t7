@@ -50,7 +50,7 @@ function ggdinfo() {
 }
 
 function ggdidea() {
-  ggdinfo | grep -e sizeGb -e id -e kind -e users:\
+  ggdinfo "$1" | grep -e sizeGb -e id -e kind -e users:\
  - ;
 
 }
@@ -97,6 +97,7 @@ function ggcicreate() {
   elif [ $1 == min ];
   then
     scope1="default,sql-admin,storage-full"
+    scope2="default,storage-full,sql,compute-rw"
 
     echo ""
     echo "Confirm creation of new Google Cloud Compute Instance with the following setup: "
@@ -106,13 +107,13 @@ function ggcicreate() {
     echo "  Service Account     : $6"
     echo "  Main Disk Name      : $4"
     echo "  Main Disk Size      : $5"
-    echo "  Scopes              : $scope1"
+    echo "  Scopes              : $scope2"
     echo ""
     echo "Please, confirm (1/2):"
 
     select yn in "Yes" "No"; do
         case $yn in
-          Yes ) gcloud compute --project "$2" instances create "$3" --zone "southamerica-east1-a" --machine-type "f1-micro" --subnet "default" --maintenance-policy "MIGRATE" --service-account "$6" --scopes $scope1 --tags "http-server" --image "debian-9-stretch-v20170918" --image-project "debian-cloud" --boot-disk-size "$5" --boot-disk-type "pd-ssd" --boot-disk-device-name "$4"; break;;
+          Yes ) gcloud compute --project "$2" instances create "$3" --machine-type "f1-micro" --scopes $scope2  --image-project "debian-cloud" --boot-disk-size "$5" --boot-disk-type "pd-ssd" --boot-disk-device-name "$4" --service-account "$6" --zone "southamerica-east1-a" --subnet "default" --maintenance-policy "MIGRATE" --tags "http-server" --image "debian-9-stretch-v20170918"; break;;
           No ) echo "the vm creation has been aborted"; break;;
         esac
     done
@@ -130,10 +131,6 @@ function ggcipcreate() {
 
   gcloud compute addresses create $1 --region southamerica-east1 
 }
-
-
-
-
 
 
 function ggbmake() {
