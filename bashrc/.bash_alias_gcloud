@@ -90,7 +90,7 @@ function ggrmvtag() {
 function ggfwcreate() {
   echo 'Creates an ingress allow port type firewall rule. Usage is': 
   echo 'ggfwcreate firewall-rule-name port-to-open target-tags'
-  ggc firewall-rules create "$1" --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:"$2" --source-ranges=0.0.0.0/0 --target-tags="$3" 
+  ggc firewall-rules create "$1" --direction=INGRESS --priority="$4" --network=default --action=ALLOW --rules=tcp:"$2" --source-ranges=0.0.0.0/0 --target-tags="$3" 
 }
 
 function ggcicreate() {

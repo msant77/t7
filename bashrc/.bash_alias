@@ -2,7 +2,7 @@ echo "tset's on!"
 echo ""
 
 alias ll="ls -lta"
-alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+#alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias py=python\ 
 export tsetpath=$HOME/d/tset/
 
@@ -25,6 +25,23 @@ function tsetsubl() {
   pushd $tsetpath
   subl .
   popd
+}
+
+
+# hardware and security 
+
+function wifioff() {
+  networksetup -setairportpower en0 off
+}
+
+function wifion() {
+  networksetup -setairportpower en0 on
+}
+
+function lockit() {
+  blueutil off
+  wifioff
+  /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
 }
 
 #virtualization and cloud stuff
