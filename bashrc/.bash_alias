@@ -29,7 +29,6 @@ function tsetsubl() {
 
 
 # hardware and security 
-
 function wifioff() {
   networksetup -setairportpower en0 off
 }
