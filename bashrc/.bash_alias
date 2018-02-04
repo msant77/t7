@@ -1,28 +1,28 @@
-echo "tset's on!"
+echo "t7's on!"
 echo ""
 
 alias ll="ls -lta"
 #alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias py=python\ 
-export tsetpath=$HOME/d/tset/
+export t7path=$HOME/d/t7/
 
 
-#tset 
-function tset() {
-  cd $tsetpath
+#t7 
+function t7() {
+  cd $t7path
   echo ""
   echo "[; hello, what r we up to ?"
   echo "" 
 }
 
-function tsetcode() {
-  pushd $tsetpath 
+function t7code() {
+  pushd $t7path 
   code . 
   popd 
 }
 
-function tsetsubl() {
-  pushd $tsetpath
+function t7subl() {
+  pushd $t7path
   subl .
   popd
 }
@@ -44,16 +44,16 @@ function lockit() {
 }
 
 #virtualization and cloud stuff
-function tsetact () {
+function t7act () {
   if [ $1 == gg ]; 
   then 
     ggsubpath=bashrc/.bash_alias_gcloud;
-    source $tsetpath$ggsubpath;
+    source $t7path$ggsubpath;
     ggact;
   elif [ $1 == vb ] ;
   then
     vbsubpath=bashrc/.bash_alias_vbox;
-    source $tsetpath$vbsubpath; 
+    source $t7path$vbsubpath; 
   fi
 }
 

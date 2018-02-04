@@ -20,7 +20,7 @@ alias gg-aci="gg-a compute instances"
 alias gg-bci="gg-b compute instances"
 
 
-export ggpath="$HOME/d/tset/bin/google-cloud-sdk/"
+export ggpath="$HOME/d/t7/bin/google-cloud-sdk/"
  
 function ggact() {
   source ${ggpath}path.bash.inc;
