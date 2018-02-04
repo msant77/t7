@@ -13,6 +13,8 @@ alias gg-b="gg beta"
 alias gg-a="gg alpha"
 alias gg-abill="gg alpha billing"
 alias gg-bbill="gg beta billing"
+alias ggzlist="ggc zones list"
+alias ggbrzlist="ggzlist | grep southamerica"
 
 alias gg-aci="gg-a compute instances"
 alias gg-bci="gg-b compute instances"
@@ -142,3 +144,9 @@ function ggbmake() {
   echo "gsutil mb -c regional -l southamerica-east1 gs://`echo "$1"`";
   gsutil mb -c regional -l southamerica-east1 gs://"$1"; 
 }
+
+function ggzchange(){
+  echo "gcloud config set compute/zone ${1}"
+  ggcfgset compute/zone "$1"
+}
+
