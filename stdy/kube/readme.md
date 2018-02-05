@@ -90,4 +90,48 @@ hello-web    10.3.251.122    203.0.113.0     80:30877/TCP     3d
 ```
 
 ### Step 7 : Scale up your application 
-(TODO Next) 
+You add more replicas to your application's Deployment resource by using the kubectl scale command. To add two additional replicas to your Deployment (for a total of three), run the following command:
+```
+kubectl scale deployment hello-web --replicas=3
+```
+You can see the new replicas running on your cluster by running the following commands:
+```
+$ kubectl get deployment hello-web
+NAME        DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+hello-web   3         3         3            2           1m
+```
+
+### Step 8 - Deploy a new version of your app
+Kubernetes Engine's rolling update mechanism ensures that your application remains up and available even as the system replaces instances of your old container image with your new one across all the running replicas.
+
+You can create an image for the v2 version of your application by building the same source code and tagging it as v2 (or you can change the "Hello, World!" string to "Hello, Kubernetes Engine!" before building the image):
+```
+docker build -t gcr.io/${PROJECT_ID}/hello-app:v2 .
+```
+Then push the image to the Google Container Registry:
+```
+gcloud docker -- push gcr.io/${PROJECT_ID}/hello-app:v2
+```
+Now, apply a rolling update to the existing deployment with an image update:
+```
+kubectl set image deployment/hello-web hello-web=gcr.io/${PROJECT_ID}/hello-app:v2
+```
+Visit your application again at http://[EXTERNAL_IP], and observe the changes you made take effect.
+
+## Cleaning up
+
+To remove all resources, proceed with the following steps: 
+1. *Delete the Service*: this step will deallocate the Cloud Load Balancer created for your service:
+```
+kubectl delete service hello-web
+```
+2. *Wait for the Load Balanced to be deleted*. The load balancer is deleted asynchronously in the background when you run `kubectl delete`. Wait until the load balancer is deleted by watching the output of the following command: 
+```
+gcloud compute forwarding-rules list
+```
+3. *Delete the container cluster*. This step will delete the resources that make up the container cluster, such as the compute instances, disks and network resources.
+```
+gcloud container clusters delete hello-cluster
+```
+
+
