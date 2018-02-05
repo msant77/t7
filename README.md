@@ -5,14 +5,33 @@ set of tools and references in order to navigate throughout the terminal multive
 ## Folder Structure
 
 ```
-.
+./
 ├── LICENSE
 ├── README.md
 ├── bashrc
-│   ├── .bash_profile
-│   ├── .bash_alias
-│   └── .bash_aria2c
-├── basic
+├── bin
+│   ├── echo
+│   ├── gcsdk.tar.gz
+│   ├── google-cloud-sdk
+│   └── nohup.out
+├── ctnr
+│   ├── compose
+│   └── imgs
+├── mac
+│   ├── diskutil.sh
+│   ├── firewall.sh
+│   └── harden.sh
+├── ops
+│   ├── c7.firewall.list.sh
+│   ├── c7.firewall.open.port.sh
+│   ├── firewall.list.sh
+│   ├── firewall.open.80.sh
+│   ├── firewall.open.8080.sh
+│   ├── gc
+│   ├── git
+│   ├── mac
+│   └── nodejs
+├── stdy
 │   ├── aria2c
 │   ├── azure
 │   ├── centos
@@ -21,22 +40,25 @@ set of tools and references in order to navigate throughout the terminal multive
 │   ├── disk
 │   ├── docker
 │   ├── gc
+│   ├── general.sh
+│   ├── git
 │   ├── ionic
+│   ├── kube
 │   ├── ls
+│   ├── mysql
 │   ├── net
 │   ├── nodejs
+│   ├── oracle
+│   ├── readme.md
 │   ├── ssh
 │   ├── swap
 │   ├── sysmon
 │   ├── user
 │   ├── vbox
 │   └── wifi
-├── mac
-│   ├── diskutil.sh
-│   ├── firewall.sh
-│   └── harden.sh
 └── win
-    └── gui
+    ├── gui
+    └── net
 ```
 
 - [bashrc - stuff to be put on general terminal use, aliases, vboxing and properly locking Mac OS Sierra](./bashrc)
