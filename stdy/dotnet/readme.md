@@ -30,17 +30,26 @@ dotnet new webapi <project-name>
 ### Entity Framework Dependencies
 2. Once the project is created, install the dependencies, one must be inside the folder with the <project-name>.csproj file
 ```
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add package Microsoft.EntityFrameworkCore.Tools
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer.Design
+  dotnet add package Microsoft.EntityFrameworkCore
+  dotnet add package Microsoft.NETCore.App
+  dotnet add package Microsoft.EntityFrameworkCore.Design
+  dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+  dotnet add package Microsoft.EntityFrameworkCore.Tools.DotNet
+  dotnet ef
+  dotnet build
 ```
 
 3. add the following to the csproj file: 
 ```
+  <PropertyGroup>
+
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RuntimeFrameworkVersion>2.0.5</RuntimeFrameworkVersion>
+
+  </PropertyGroup>
+
 <ItemGroup>
-    <DotNetCliToolReference
-        Include="Microsoft.EntityFrameworkCore.Tools.DotNet"
-        Version="1.0.0-msbuild3-final" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
 </ItemGroup>
 ```
 4. Restore the project so that all dependencies are checked upon
