@@ -35,8 +35,6 @@ dotnet new webapi <project-name>
   dotnet add package Microsoft.EntityFrameworkCore.Design
   dotnet add package Microsoft.EntityFrameworkCore.SqlServer
   dotnet add package Microsoft.EntityFrameworkCore.Tools.DotNet
-  dotnet ef
-  dotnet build
 ```
 
 3. add the following to the csproj file: 
@@ -89,8 +87,17 @@ Commands:
 Use "dotnet ef [command] --help" for more information about a command.
 ```
 
-5. Check if the project is still building:
+6. Check if the project is still building:
 ```
 dotnet build
 ``` 
+
+7. Generate the scaffold from your database in the following command: 
+```
+dotnet ef dbcontext scaffold "Server=10.0.0.12,1401;Initial Catalog=orders;User Id=sa;Password=strong5password1avoid2special3characters4"  Microsoft.EntityFrameworkCore.SqlServer -f -c OrdersDbContext -o Db --json
+```
+The command above can be described as the one responsible for reading out your database and generating your scaffold poco entity classes and the dbcontext file. It requires a basic working connection string, the parameter `f` forces the overwrite, the `c` gives the context a name, the `o` determines the output folder and the whole thing namespace and the `json` parameter outputs the command result in json instead of a zero stout.
+
+> it is very important to keep this command at hand, if you are one of those who rather change the database and then have it reflected thoughtout your ORM, this command is for you and it will be used very often.
+
 
