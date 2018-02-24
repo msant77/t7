@@ -88,15 +88,6 @@ Commands:
 
 Use "dotnet ef [command] --help" for more information about a command.
 ```
-If instead you got a screen like this one: 
-```
-The specified framework 'Microsoft.NETCore.App', version '1.0.0' was not found.
-  - Check application dependencies and target a framework version installed at:
-      /
-  - Alternatively, install the framework version '1.0.0'.
-```
-Install the .NET Core 1 as suggested. It can be found at [https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.5-download.md](https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.5-download.md)
-
 
 5. Check if the project is still building:
 ```
