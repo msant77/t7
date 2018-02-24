@@ -33,9 +33,21 @@ dotnet new webapi <project-name>
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer.Design
-dotnet add package Microsoft.EntityFrameworkCore.Tools.DotNet
 ```
-In order to make sure it all went ok, run the following command
+
+3. add the following to the csproj file: 
+```
+<ItemGroup>
+    <DotNetCliToolReference
+        Include="Microsoft.EntityFrameworkCore.Tools.DotNet"
+        Version="1.0.0-msbuild3-final" />
+</ItemGroup>
+```
+4. Restore the project so that all dependencies are checked upon
+```
+dotnet restore
+```
+5. In order to make sure it all went ok, run the following command
 ```
 dotnet ef 
 ```
@@ -67,4 +79,18 @@ Commands:
 
 Use "dotnet ef [command] --help" for more information about a command.
 ```
+If instead you got a screen like this one: 
+```
+The specified framework 'Microsoft.NETCore.App', version '1.0.0' was not found.
+  - Check application dependencies and target a framework version installed at:
+      /
+  - Alternatively, install the framework version '1.0.0'.
+```
+Install the .NET Core 1 as suggested. It can be found at [https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.5-download.md](https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.5-download.md)
+
+
+5. Check if the project is still building:
+```
+dotnet build
+``` 
 
