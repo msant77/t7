@@ -100,4 +100,11 @@ The command above can be described as the one responsible for reading out your d
 
 > it is very important to keep this command at hand, if you are one of those who rather change the database and then have it reflected thoughtout your ORM, this command is for you and it will be used very often.
 
+## More stuff about scaffolding 
+
+Following command will also be selective on which tables are going to be scaffolded: 
+```
+dotnet ef dbcontext scaffold "Server=10.0.0.12,1401;Initial Catalog=orders;User Id=sa;Password=strong5password1avoid2special3characters4"  Microsoft.EntityFrameworkCore.SqlServer -f -c OrdersDbContext -o Db --json -t product -t customer -t purchaseDetails
+```
+Only the tables product, customer and purchaseDetails are going to be retrieved and have code generated to control them, all another tables are going to be ignored. There is also a handy `--schema` if one manages the database with schemas.
 
