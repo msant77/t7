@@ -24,20 +24,12 @@ from the tutorial [https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-
 ### Create project
 1. Put project creation commands in here
 ```
-dotnet new webapi <project-name>
+mkdir project-name && cd $_
+dotnet new webapi
 ```
 
 ### Entity Framework Dependencies
-2. Once the project is created, install the dependencies, one must be inside the folder with the <project-name>.csproj file
-```
-  dotnet add package Microsoft.EntityFrameworkCore
-  dotnet add package Microsoft.NETCore.App
-  dotnet add package Microsoft.EntityFrameworkCore.Design
-  dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-  dotnet add package Microsoft.EntityFrameworkCore.Tools.DotNet
-```
-
-3. add the following to the csproj file: 
+2. add the following to the csproj file: 
 ```
   <PropertyGroup>
 
@@ -50,6 +42,16 @@ dotnet new webapi <project-name>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
 </ItemGroup>
 ```
+3. Once the project is created, install the dependencies, one must be inside the folder with the <project-name>.csproj file
+```
+  dotnet add package Microsoft.EntityFrameworkCore
+  dotnet add package Microsoft.EntityFrameworkCore.Design
+  dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+  dotnet add package Microsoft.EntityFrameworkCore.Tools.DotNet
+```
+
+
+
 4. Restore the project so that all dependencies are checked upon
 ```
 dotnet restore
