@@ -32,6 +32,7 @@ ostype >"
     echo "  Machine-Type        : $4"    
     echo "  RAM Size            : $2"
     echo "  Main Disk Size      : $3"
+    echo "  ISO to Start with   : $5"
     echo ""
     echo "Please, confirm (1/2):"
 
@@ -67,7 +68,7 @@ ostype >"
   echo "===> creating dvd1..."
 
   vboxmanage storagectl "$1" --name "IDE Controller" --add ide   
-  vboxmanage storageattach "$1" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium "$4"
+  vboxmanage storageattach "$1" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium "$5"
 
 
   echo "===> setting boot order..."
