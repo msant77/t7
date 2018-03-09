@@ -9,7 +9,39 @@ function vbostype() {
   vb list ostypes; 
 }
 
-function vbcreatel64() { 
+function vbmainostypes() {
+  echo 'Linux_64'
+  echo 'WindowsNT_64'
+}
+
+function vbcreate() { 
+
+  if [ $1 == help ];
+  then
+   echo "... parameters" 
+   echo "<name | ram size | disk size |    
+ostype >"
+   echo ""
+   echo "refer to the commands vbmainsostypes() and vbostype() in order to list all available OS Types"
+   return
+  else 
+  
+    echo ""
+    echo "Confirm creation of new Virtual Box Machine Instance with the following setup: "
+    echo "  Instance Name       : $1"
+    echo "  Machine-Type        : $4"    
+    echo "  RAM Size            : $2"
+    echo "  Main Disk Size      : $3"
+    echo ""
+    echo "Please, confirm (1/2):"
+
+    select yn in "Yes" "No"; do
+        case $yn in
+          Yes ) echo "ok"; break;; 
+          No ) return; break;;
+        esac
+    done
+  fi
 
   vmhome=`pwd`/"$1" 
   vdipath=$vmhome/"$1".vdi
@@ -23,7 +55,7 @@ function vbcreatel64() {
   echo "===> creating vm... named:""$1"" "$RamSize" RAM"" "$DiskSize" Disk Size"
  
   vboxmanage createhd --filename $vdipath  --size=$DiskSize
-  vboxmanage createvm --name "$1" --register --basefolder $vmhome --ostype='Linux_64'
+  vboxmanage createvm --name "$1" --register --basefolder $vmhome --ostype="$4"
 
   echo ""
   echo "===> creating hdd1..."
