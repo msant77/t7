@@ -9,6 +9,8 @@ Folder Content:
 │   └── basic.sh
 ├── azure
 │   ├── README.md
+│   ├── blobDownloadBatch.sh
+│   ├── blobSizeRetriever.sh
 │   ├── createstorage.sh
 │   ├── devenvstart.sh
 │   ├── devenvstop.sh
@@ -30,8 +32,13 @@ Folder Content:
 │   ├── linux.sh
 │   └── mac.sh
 ├── docker
-│   ├── README.md
-│   └── basic.sh
+│   ├── basic.sh
+│   ├── docker-compose.md
+│   ├── microsoft.md
+│   ├── mysql-phpmyadmin.md
+│   └── readme.md
+├── dotnet
+│   └── readme.md
 ├── gc
 │   ├── README.md
 │   ├── Windows.Readme.md
@@ -41,22 +48,33 @@ Folder Content:
 │   ├── gcloud-compute.md
 │   ├── gcloud-general.md
 │   ├── gcloud-storage.md
-│   └── getting-started.md
+│   ├── getting-started.md
+│   └── instances-managing-101.md
 ├── general.sh
+├── git
+│   └── basic.sh
 ├── ionic
 │   └── basic.sh
+├── kube
+│   ├── kubernetes-engine-samples
+│   └── readme.md
 ├── ls
 │   └── basic.sh
+├── mysql
+│   └── readme.md
 ├── net
 │   ├── curlwget.sh
 │   ├── general.sh
 │   ├── iptables.sh
 │   └── pfctl.sh
 ├── nodejs
-│   └── basic.sh
+│   ├── install.sh
+│   └── nvm.install.sh
 ├── oracle
 │   └── readme.md
 ├── readme.md
+├── sql
+│   └── readme.md
 ├── ssh
 │   ├── basic.sh
 │   └── sshServerOnMac.sh
