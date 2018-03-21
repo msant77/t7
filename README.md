@@ -5,10 +5,15 @@ set of tools and references in order to navigate throughout the terminal multive
 ## Folder Structure
 
 ```
-./
+.
 ├── LICENSE
 ├── README.md
 ├── bashrc
+├── bin
+│   ├── echo
+│   ├── gcsdk.tar.gz
+│   ├── google-cloud-sdk
+│   └── nohup.out
 ├── ctnr
 │   ├── compose
 │   └── imgs
@@ -34,6 +39,7 @@ set of tools and references in order to navigate throughout the terminal multive
 │   ├── crypto
 │   ├── disk
 │   ├── docker
+│   ├── dotnet
 │   ├── gc
 │   ├── general.sh
 │   ├── git
@@ -45,6 +51,7 @@ set of tools and references in order to navigate throughout the terminal multive
 │   ├── nodejs
 │   ├── oracle
 │   ├── readme.md
+│   ├── sql
 │   ├── ssh
 │   ├── swap
 │   ├── sysmon
