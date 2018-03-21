@@ -1,4 +1,4 @@
-#Docker Compose Basics
+# Docker Compose Basics
 
 ## Docker Compose, Service
 
@@ -30,6 +30,9 @@ docker-compose
 
 #docker-compose run the _docker-compose.yml_
 docker-compose up
+
+#docker-compose stop running
+docker-compose down
 
 #force docker-compose to run and build all its nodes
 docker-compose up --build
