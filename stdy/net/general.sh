@@ -7,7 +7,15 @@
  #brute full lsof report
  lsof
  # lsof filtered by LISTEN  
- lsof | grep LISTEN 
+ lsof | grep LISTEN
+
+#lsof filter by port number 
+sudo lsof -i tcp:4000
+
+#lsof with processes names
+sudo lsof -nP | grep LISTEN
+
+ 
 
 
 #net status, net usage
