@@ -113,3 +113,7 @@ Build a local Dockerfile based on the image voichesapete:first
   551  docker build -t voichesapete:first .
   552  docker run -dit --name voi voichesapete:first
 ```
+
+## Docker Compose 
+> the documentation concerning the `docker-compose` command has been moved to its own [readme.md like file](./docker-compose.md)
+
