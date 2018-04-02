@@ -1,0 +1,60 @@
+[{
+      "_id": "5abbdeacfe8f8300a6a9dae9",
+      "amount": 2000,
+      "imovel_provider": {
+        "name": "Brognoli"
+      },
+      "image": [
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-024.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-025.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-026.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-027.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-028.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-029.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-030.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-031.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-032.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-033.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-034.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-035.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-036.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-037.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-038.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-039.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-040.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-041.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-042.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-043.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-044.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-045.jpg",
+        "http://fotos.brognoli.com.br/html_web/www/images/fotos/31563/big-31563-046.jpg"
+      ],
+      "link": "http://www.brognoli.com.br/search-code/?search_code=31563",
+      "condominium_fees": 546,
+      "property_taxes": "134",
+      "garages": 1,
+      "suites": 1,
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "specific_kind": "apartment",
+      "kind": "residential",
+      "action": "rent",
+      "description": "Apartamento em Canasvieiras; novo, primeira locação e ótimo padrão de acabamento; aproximadamente 84 m2 de área privativa; piso porcelanato; sala ampla para 02 ambientes; sacada com churrasqueira a carvão e pia em granito; cozinha com armários planejados e pia em granito; 03 quartos sendo 01 suíte, todos com persianas elétricas; banheiro social e da suíte com box de vidro, armários planejados e espelho; área de serviço com tanque e bancada em granito; aquecimento à gás; 01 vaga de garagem livre 07 e hobby box 07; condomínio com elevador, salão de festas e piscina; ótima localização, próximo a praia.",
+      "title": "APARTAMENTO DE 3 QUARTOS EM CANASVIEIRAS",
+      "imovel_id": 31563,
+      "neighborhood": {
+        "_id": "5abbdc9d6bca5f006dd9f7b9",
+        "uf": "SC",
+        "name": "Canasvieiras"
+      },
+      "city": {
+        "_id": "5abbdc676bca5f006dd9c1b5",
+        "uf": "SC",
+        "name": "Florianópolis"
+      },
+      "state": {
+        "_id": "5abbdc5a6bca5f006dd9a112",
+        "uf": "SC"
+      }
+    }
+]

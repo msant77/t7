@@ -1,0 +1,12 @@
+{
+  "name": "aptoGetter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Marco Santana",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+  }
+}

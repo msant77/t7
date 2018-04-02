@@ -135,4 +135,6 @@ gcloud beta functions list
 gcloud beta functions describe <FUNCTION_NAME>
 ```
 
+### Information on how to deploy mongodb into a kubernetes cluster
+> Follow this link : [https://codelabs.developers.google.com/codelabs/cloud-mongodb-statefulset/index.html?index=..%2F..%2Findex#3](https://codelabs.developers.google.com/codelabs/cloud-mongodb-statefulset/index.html?index=..%2F..%2Findex#3)
 

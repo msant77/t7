@@ -1,0 +1,82 @@
+[
+  {
+    "id": 410250,
+    "title": "Apartamento",
+    "address": "Rua Waldemiro José Carlson, 174",
+    "region": "CANASVIEIRAS",
+    "price": "2000",
+    "area": "103.27",
+    "bedrooms": "3",
+    "bathrooms": "2"
+  },
+  {
+    "id": 399451,
+    "title": "Apartamento",
+    "address": "RUA LEONEL PEREIRA, 946",
+    "region": "CACHOEIRA",
+    "price": "1400",
+    "area": "69.00",
+    "bedrooms": "2",
+    "bathrooms": "1"
+  },
+  {
+    "id": 374235,
+    "title": "Apartamento",
+    "address": "OLIMPIO MANOEL DA COSTA, 21",
+    "region": "CANASVIEIRAS",
+    "price": "1100",
+    "area": "80",
+    "bedrooms": "2",
+    "bathrooms": "1"
+  },
+  {
+    "id": 358096,
+    "title": "Cobertura",
+    "address": "RUA LEONEL PEREIRA, 946",
+    "region": "CACHOEIRA",
+    "price": "1400",
+    "area": "137.00",
+    "bedrooms": "2",
+    "bathrooms": "1"
+  },
+  {
+    "id": 123122,
+    "title": "De frente para a Lagoa",
+    "address": "RUA JOAO PACHECO DA COSTA, 904",
+    "region": "LAGOA",
+    "price": 1500,
+    "area": "80",
+    "bedrooms": "2",
+    "bathrooms": "2"
+  },
+  {
+    "id": 436565,
+    "title": "1 dormitório aconchegante",
+    "address": "RUA SEVERINO NASCIMENTO DE JESUS, 345",
+    "region": "LAGOA",
+    "price": 1000,
+    "area": "30",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
+  {
+    "id": 89977,
+    "title": "3 dormitórios abundantes",
+    "address": "RUA VIRGULINO FERREIRA DA SILVA, 345",
+    "region": "JURERE",
+    "price": 2500,
+    "area": "120",
+    "bedrooms": "3",
+    "bathrooms": "3"
+  },
+  {
+    "id": 24677,
+    "title": "De frente para a praia",
+    "address": "RUA PRINCIPAL, 345",
+    "region": "CACHOEIRA",
+    "price": 1850,
+    "area": "120",
+    "bedrooms": "2",
+    "bathrooms": "2"
+  }
+]

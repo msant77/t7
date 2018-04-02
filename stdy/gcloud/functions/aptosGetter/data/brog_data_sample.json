@@ -1,0 +1,651 @@
+[
+    {
+      "id": 410250,
+      "title": "Apartamento",
+      "link": "https:\/\/www.brognoli.com.br\/imovel\/locacao-apartamento-31563\/",
+      "lat": "-27.4297926",
+      "lng": "-48.4669768",
+      "address": "Rua Waldemiro Jos\u00e9 Carlson, 174",
+      "state": "SC",
+      "zip": "",
+      "country": "Brasil",
+      "price": "2000",
+      "currency": "R$",
+      "currency_pos": "before",
+      "price_label": "\/m\u00eas",
+      "area": "103.27",
+      "unit": "m\u00b2",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "featured": "",
+      "campaign": "",
+      "city": "FLORIAN\u00d3POLIS",
+      "thumb": "https:\/\/www.brognoli.com.br\/wp-content\/uploads\/2018\/02\/big-31563-024-400x240.jpg",
+      "category": [
+        {
+          "term_id": 444,
+          "name": "Apartamento",
+          "slug": "apartamento",
+          "term_group": 0,
+          "term_taxonomy_id": 444,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 1040,
+          "filter": "raw"
+        }
+      ],
+      "type": [
+        {
+          "term_id": 3,
+          "name": "Alugar",
+          "slug": "alugar",
+          "term_group": 0,
+          "term_taxonomy_id": 3,
+          "taxonomy": "property_type_category",
+          "description": "",
+          "parent": 0,
+          "count": 7351,
+          "filter": "raw"
+        }
+      ],
+      "region": [
+        {
+          "term_id": 1159,
+          "name": "CANASVIEIRAS",
+          "slug": "canasvieiras",
+          "term_group": 0,
+          "term_taxonomy_id": 1159,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 1158,
+          "count": 56,
+          "filter": "raw"
+        },
+        {
+          "term_id": 1158,
+          "name": "REGI\u00c3O FLORIAN\u00d3POLIS NORTE",
+          "slug": "regiao-florianopolis-norte",
+          "term_group": 0,
+          "term_taxonomy_id": 1158,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 0,
+          "count": 361,
+          "filter": "raw"
+        }
+      ],
+      "agency": [
+        {
+          "term_id": 1245,
+          "name": "5",
+          "slug": "5",
+          "term_group": 0,
+          "term_taxonomy_id": 1245,
+          "taxonomy": "property_agency",
+          "description": "",
+          "parent": 0,
+          "count": 2140,
+          "filter": "raw"
+        }
+      ]
+    },
+    {
+      "id": 399451,
+      "title": "Apartamento",
+      "link": "https:\/\/www.brognoli.com.br\/imovel\/locacao-apartamento-31687\/",
+      "lat": "-27.5918972",
+      "lng": "-48.5195967",
+      "address": "RUA LEONEL PEREIRA, 946",
+      "state": "SC",
+      "zip": "",
+      "country": "Brasil",
+      "price": "1400",
+      "currency": "R$",
+      "currency_pos": "before",
+      "price_label": "\/m\u00eas",
+      "area": "69.00",
+      "unit": "m\u00b2",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "featured": "",
+      "campaign": "",
+      "city": "FLORIAN\u00d3POLIS",
+      "thumb": "https:\/\/www.brognoli.com.br\/wp-content\/uploads\/2018\/03\/big-31687-015-400x240.jpg",
+      "category": [
+        {
+          "term_id": 444,
+          "name": "Apartamento",
+          "slug": "apartamento",
+          "term_group": 0,
+          "term_taxonomy_id": 444,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 1040,
+          "filter": "raw"
+        }
+      ],
+      "type": [
+        {
+          "term_id": 3,
+          "name": "Alugar",
+          "slug": "alugar",
+          "term_group": 0,
+          "term_taxonomy_id": 3,
+          "taxonomy": "property_type_category",
+          "description": "",
+          "parent": 0,
+          "count": 7351,
+          "filter": "raw"
+        }
+      ],
+      "region": [
+        {
+          "term_id": 1240,
+          "name": "CACHOEIRA DO BOM JESUS",
+          "slug": "cachoeira-do-bom-jesus",
+          "term_group": 0,
+          "term_taxonomy_id": 1240,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 1158,
+          "count": 17,
+          "filter": "raw"
+        },
+        {
+          "term_id": 1158,
+          "name": "REGI\u00c3O FLORIAN\u00d3POLIS NORTE",
+          "slug": "regiao-florianopolis-norte",
+          "term_group": 0,
+          "term_taxonomy_id": 1158,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 0,
+          "count": 361,
+          "filter": "raw"
+        }
+      ],
+      "agency": [
+        {
+          "term_id": 1245,
+          "name": "5",
+          "slug": "5",
+          "term_group": 0,
+          "term_taxonomy_id": 1245,
+          "taxonomy": "property_agency",
+          "description": "",
+          "parent": 0,
+          "count": 2140,
+          "filter": "raw"
+        }
+      ]
+    },
+    {
+      "id": 374235,
+      "title": "Apartamento",
+      "link": "https:\/\/www.brognoli.com.br\/imovel\/locacao-apartamento-70423\/",
+      "lat": "-27.4439325",
+      "lng": "-48.4608647",
+      "address": "OLIMPIO MANOEL DA COSTA, 21",
+      "state": "SC",
+      "zip": "",
+      "country": "Brasil",
+      "price": "1100",
+      "currency": "R$",
+      "currency_pos": "before",
+      "price_label": "\/m\u00eas",
+      "area": "0.00",
+      "unit": "m\u00b2",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "featured": "",
+      "campaign": "",
+      "city": "FLORIAN\u00d3POLIS",
+      "thumb": "https:\/\/www.brognoli.com.br\/wp-content\/uploads\/2018\/03\/big-70423-001-400x240.jpg",
+      "category": [
+        {
+          "term_id": 444,
+          "name": "Apartamento",
+          "slug": "apartamento",
+          "term_group": 0,
+          "term_taxonomy_id": 444,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 1040,
+          "filter": "raw"
+        }
+      ],
+      "type": [
+        {
+          "term_id": 3,
+          "name": "Alugar",
+          "slug": "alugar",
+          "term_group": 0,
+          "term_taxonomy_id": 3,
+          "taxonomy": "property_type_category",
+          "description": "",
+          "parent": 0,
+          "count": 7351,
+          "filter": "raw"
+        }
+      ],
+      "region": [
+        {
+          "term_id": 1159,
+          "name": "CANASVIEIRAS",
+          "slug": "canasvieiras",
+          "term_group": 0,
+          "term_taxonomy_id": 1159,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 1158,
+          "count": 56,
+          "filter": "raw"
+        },
+        {
+          "term_id": 1158,
+          "name": "REGI\u00c3O FLORIAN\u00d3POLIS NORTE",
+          "slug": "regiao-florianopolis-norte",
+          "term_group": 0,
+          "term_taxonomy_id": 1158,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 0,
+          "count": 361,
+          "filter": "raw"
+        }
+      ],
+      "agency": [
+        {
+          "term_id": 1245,
+          "name": "5",
+          "slug": "5",
+          "term_group": 0,
+          "term_taxonomy_id": 1245,
+          "taxonomy": "property_agency",
+          "description": "",
+          "parent": 0,
+          "count": 2140,
+          "filter": "raw"
+        }
+      ]
+    },
+    {
+      "id": 358096,
+      "title": "Cobertura",
+      "link": "https:\/\/www.brognoli.com.br\/imovel\/locacao-coberturaapartamento-31336\/",
+      "lat": "-27.4253332",
+      "lng": "-48.4255649",
+      "address": "RUA LEONEL PEREIRA, 946",
+      "state": "SC",
+      "zip": "",
+      "country": "Brasil",
+      "price": "1400",
+      "currency": "R$",
+      "currency_pos": "before",
+      "price_label": "\/m\u00eas",
+      "area": "137.00",
+      "unit": "m\u00b2",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "featured": "",
+      "campaign": "",
+      "city": "FLORIAN\u00d3POLIS",
+      "thumb": "https:\/\/www.brognoli.com.br\/wp-content\/uploads\/2018\/03\/big-31336-028-400x240.jpg",
+      "category": [
+        {
+          "term_id": 444,
+          "name": "Apartamento",
+          "slug": "apartamento",
+          "term_group": 0,
+          "term_taxonomy_id": 444,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 1040,
+          "filter": "raw"
+        },
+        {
+          "term_id": 473,
+          "name": "Cobertura",
+          "slug": "cobertura",
+          "term_group": 0,
+          "term_taxonomy_id": 473,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 43,
+          "filter": "raw"
+        }
+      ],
+      "type": [
+        {
+          "term_id": 3,
+          "name": "Alugar",
+          "slug": "alugar",
+          "term_group": 0,
+          "term_taxonomy_id": 3,
+          "taxonomy": "property_type_category",
+          "description": "",
+          "parent": 0,
+          "count": 7351,
+          "filter": "raw"
+        }
+      ],
+      "region": [
+        {
+          "term_id": 1240,
+          "name": "CACHOEIRA DO BOM JESUS",
+          "slug": "cachoeira-do-bom-jesus",
+          "term_group": 0,
+          "term_taxonomy_id": 1240,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 1158,
+          "count": 17,
+          "filter": "raw"
+        },
+        {
+          "term_id": 1158,
+          "name": "REGI\u00c3O FLORIAN\u00d3POLIS NORTE",
+          "slug": "regiao-florianopolis-norte",
+          "term_group": 0,
+          "term_taxonomy_id": 1158,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 0,
+          "count": 361,
+          "filter": "raw"
+        }
+      ],
+      "agency": [
+        {
+          "term_id": 1245,
+          "name": "5",
+          "slug": "5",
+          "term_group": 0,
+          "term_taxonomy_id": 1245,
+          "taxonomy": "property_agency",
+          "description": "",
+          "parent": 0,
+          "count": 2140,
+          "filter": "raw"
+        }
+      ]
+    },
+    {
+      "id": 374234,
+      "title": "Apartamento",
+      "link": "https:\/\/www.brognoli.com.br\/imovel\/locacao-apartamento-70422\/",
+      "lat": "-27.4439325",
+      "lng": "-48.4608647",
+      "address": "OLIMPIO MANOEL DA COSTA, 21",
+      "state": "SC",
+      "zip": "",
+      "country": "Brasil",
+      "price": "1300",
+      "currency": "R$",
+      "currency_pos": "before",
+      "price_label": "\/m\u00eas",
+      "area": "0.00",
+      "unit": "m\u00b2",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "featured": "",
+      "campaign": "",
+      "city": "FLORIAN\u00d3POLIS",
+      "thumb": "https:\/\/www.brognoli.com.br\/wp-content\/uploads\/2018\/02\/big-70422-001-400x240.jpg",
+      "category": [
+        {
+          "term_id": 444,
+          "name": "Apartamento",
+          "slug": "apartamento",
+          "term_group": 0,
+          "term_taxonomy_id": 444,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 1040,
+          "filter": "raw"
+        }
+      ],
+      "type": [
+        {
+          "term_id": 3,
+          "name": "Alugar",
+          "slug": "alugar",
+          "term_group": 0,
+          "term_taxonomy_id": 3,
+          "taxonomy": "property_type_category",
+          "description": "",
+          "parent": 0,
+          "count": 7351,
+          "filter": "raw"
+        }
+      ],
+      "region": [
+        {
+          "term_id": 1159,
+          "name": "CANASVIEIRAS",
+          "slug": "canasvieiras",
+          "term_group": 0,
+          "term_taxonomy_id": 1159,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 1158,
+          "count": 56,
+          "filter": "raw"
+        },
+        {
+          "term_id": 1158,
+          "name": "REGI\u00c3O FLORIAN\u00d3POLIS NORTE",
+          "slug": "regiao-florianopolis-norte",
+          "term_group": 0,
+          "term_taxonomy_id": 1158,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 0,
+          "count": 361,
+          "filter": "raw"
+        }
+      ],
+      "agency": [
+        {
+          "term_id": 1245,
+          "name": "5",
+          "slug": "5",
+          "term_group": 0,
+          "term_taxonomy_id": 1245,
+          "taxonomy": "property_agency",
+          "description": "",
+          "parent": 0,
+          "count": 2140,
+          "filter": "raw"
+        }
+      ]
+    },
+    {
+      "id": 373846,
+      "title": "Apartamento",
+      "link": "https:\/\/www.brognoli.com.br\/imovel\/locacao-apartamento-70416\/",
+      "lat": "-27.4439325",
+      "lng": "-48.4608647",
+      "address": "OLIMPIO MANOEL DA COSTA, 21",
+      "state": "SC",
+      "zip": "",
+      "country": "Brasil",
+      "price": "1300",
+      "currency": "R$",
+      "currency_pos": "before",
+      "price_label": "\/m\u00eas",
+      "area": "0.00",
+      "unit": "m\u00b2",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "featured": "",
+      "campaign": "",
+      "city": "FLORIAN\u00d3POLIS",
+      "thumb": "https:\/\/www.brognoli.com.br\/wp-content\/uploads\/2018\/02\/big-70416-001-400x240.jpg",
+      "category": [
+        {
+          "term_id": 444,
+          "name": "Apartamento",
+          "slug": "apartamento",
+          "term_group": 0,
+          "term_taxonomy_id": 444,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 1040,
+          "filter": "raw"
+        }
+      ],
+      "type": [
+        {
+          "term_id": 3,
+          "name": "Alugar",
+          "slug": "alugar",
+          "term_group": 0,
+          "term_taxonomy_id": 3,
+          "taxonomy": "property_type_category",
+          "description": "",
+          "parent": 0,
+          "count": 7351,
+          "filter": "raw"
+        }
+      ],
+      "region": [
+        {
+          "term_id": 1159,
+          "name": "CANASVIEIRAS",
+          "slug": "canasvieiras",
+          "term_group": 0,
+          "term_taxonomy_id": 1159,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 1158,
+          "count": 56,
+          "filter": "raw"
+        },
+        {
+          "term_id": 1158,
+          "name": "REGI\u00c3O FLORIAN\u00d3POLIS NORTE",
+          "slug": "regiao-florianopolis-norte",
+          "term_group": 0,
+          "term_taxonomy_id": 1158,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 0,
+          "count": 361,
+          "filter": "raw"
+        }
+      ],
+      "agency": [
+        {
+          "term_id": 1245,
+          "name": "5",
+          "slug": "5",
+          "term_group": 0,
+          "term_taxonomy_id": 1245,
+          "taxonomy": "property_agency",
+          "description": "",
+          "parent": 0,
+          "count": 2140,
+          "filter": "raw"
+        }
+      ]
+    },
+    {
+      "id": 373848,
+      "title": "Apartamento",
+      "link": "https:\/\/www.brognoli.com.br\/imovel\/locacao-apartamento-70420\/",
+      "lat": "-27.4439325",
+      "lng": "-48.4608647",
+      "address": "OLIMPIO MANOEL DA COSTA, 21",
+      "state": "SC",
+      "zip": "",
+      "country": "Brasil",
+      "price": "1300",
+      "currency": "R$",
+      "currency_pos": "before",
+      "price_label": "\/m\u00eas",
+      "area": "0.00",
+      "unit": "m\u00b2",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "featured": "",
+      "campaign": "",
+      "city": "FLORIAN\u00d3POLIS",
+      "thumb": "https:\/\/www.brognoli.com.br\/wp-content\/uploads\/2018\/02\/big-70420-001-400x240.jpg",
+      "category": [
+        {
+          "term_id": 444,
+          "name": "Apartamento",
+          "slug": "apartamento",
+          "term_group": 0,
+          "term_taxonomy_id": 444,
+          "taxonomy": "property_category",
+          "description": "",
+          "parent": 0,
+          "count": 1040,
+          "filter": "raw"
+        }
+      ],
+      "type": [
+        {
+          "term_id": 3,
+          "name": "Alugar",
+          "slug": "alugar",
+          "term_group": 0,
+          "term_taxonomy_id": 3,
+          "taxonomy": "property_type_category",
+          "description": "",
+          "parent": 0,
+          "count": 7351,
+          "filter": "raw"
+        }
+      ],
+      "region": [
+        {
+          "term_id": 1159,
+          "name": "CANASVIEIRAS",
+          "slug": "canasvieiras",
+          "term_group": 0,
+          "term_taxonomy_id": 1159,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 1158,
+          "count": 56,
+          "filter": "raw"
+        },
+        {
+          "term_id": 1158,
+          "name": "REGI\u00c3O FLORIAN\u00d3POLIS NORTE",
+          "slug": "regiao-florianopolis-norte",
+          "term_group": 0,
+          "term_taxonomy_id": 1158,
+          "taxonomy": "property_regions",
+          "description": "",
+          "parent": 0,
+          "count": 361,
+          "filter": "raw"
+        }
+      ],
+      "agency": [
+        {
+          "term_id": 1245,
+          "name": "5",
+          "slug": "5",
+          "term_group": 0,
+          "term_taxonomy_id": 1245,
+          "taxonomy": "property_agency",
+          "description": "",
+          "parent": 0,
+          "count": 2140,
+          "filter": "raw"
+        }
+      ]
+    }
+  ]
