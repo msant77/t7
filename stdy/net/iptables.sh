@@ -28,4 +28,26 @@ sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED 
 sudo iptables -A OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j ACCEPT
 
 
+#Redirect/Forward of ports
+# Sources: 
+#     https://coderwall.com/p/plejka/forward-port-80-to-port-3000
+#     https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules
+
+# Add internal forward from 80 to 3000
+sudo iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 3000
+
+# Add external forward from 80 to 3000
+sudo iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3000
+
+
+# Cancel former internal forward (mind the D parameter) 
+sudo iptables -t nat -D OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 3000
+
+
+# Cancel former external forward (mind the D parameter) 
+sudo iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3000
+
+
+ 
+
 
